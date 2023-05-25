@@ -127,16 +127,19 @@
                         <div class="carousel-item">
                             <div class="carousel-caption d-none d-md-block">
                                 <h3>This Month's Promotions</h3>
-                            
-                            
+
+
                                 <h2>Weekend Grand Buffet</h2>
-                                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing
-                                    appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks.
+                                <p>Featuring mouthwatering combinations with a choice of five different salads, six
+                                    enticing
+                                    appetizers, six main entrees and five choicest desserts. Free flowing bubbly and
+                                    soft drinks.
                                     All for just $19.99 per person </p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="Alberto Somayya">
+                            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png"
+                                alt="Alberto Somayya">
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="mt-0">Alberto Somayya</h2>
                                 <h4>Executive Chef</h4>
@@ -148,6 +151,7 @@
                             </div>
                         </div>
                     </div>
+
                     <ol class="carousel-indicators">
                         <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#mycarousel" data-slide-to="1"></li>
@@ -159,6 +163,14 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <div class="btn-group" id="carouselButton">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
 
                 </div>
 
@@ -268,6 +280,17 @@
         <script>
             $(document).ready(function () {
                 $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#mycarousel").carousel({ interval: 2000 });
+                $("#carousel-pause").click(function () {
+                    $("#mycarousel").carousel('pause');
+                });
+                $("#carousel-play").click(function () {
+                    $("#mycarousel").carousel('cycle');
+                });
             });
         </script>
 
